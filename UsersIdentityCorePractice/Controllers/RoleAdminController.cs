@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using UsersIdentityCorePractice.Models;
 
 namespace UsersIdentityCorePractice.Controllers
 {
+    [Authorize(Roles = "Administrator")]
     public class RoleAdminController : Controller
     {
         private RoleManager<IdentityRole> _roleManager;

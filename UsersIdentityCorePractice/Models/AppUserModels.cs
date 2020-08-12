@@ -8,6 +8,22 @@ namespace UsersIdentityCorePractice.Models
 {
     public class AppUser : IdentityUser
     {
-        //no additional members required for basic identity installation
+        public City City { get; set; }
+        public QualificationLevel Qualification { get; set; }
+    }
+
+    public enum City
+    {
+        None,
+        London,
+        Paris,
+        Chicago
+    }
+
+    public enum QualificationLevel
+    {
+        None,
+        Basic,
+        Advanced
     }
 }
